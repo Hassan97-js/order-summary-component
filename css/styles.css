@@ -188,6 +188,7 @@ body {
   background-color: hsl(245, 75%, 52%);
   color: hsl(0, 0%, 100%);
   border-radius: 11px;
+  box-shadow: 0 20px 30px rgb(77, 63, 228, 0.1);
   transition: background-color 250ms ease-in-out;
 }
 
