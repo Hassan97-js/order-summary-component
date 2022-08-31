@@ -1,0 +1,291 @@
+/*
+
+Design settings:
+
+--- 01 TYPOGRAPHY SYSTEM (px)
+
+- Font sizes (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+- Line heights: 1, 1.5
+Default:
+Small:
+Medium:
+Paragraph default:
+
+- Letter spacing: -0.2px
+Heading letter spacing:
+Subheading letter spacing:
+
+--- 02 COLORS
+(Primary with tints, shades and accent colors)
+
+- Primary:
+- Tints:
+- Shades:
+- Accents:
+- Greys:
+  - dark:
+  - medium:
+  - light:
+- White: hsl(0, 0%, 100%)
+
+--- 03 IMAGES
+- No system
+
+--- 04 ICONS
+- source:
+
+--- 05 SHADOWS
+- No system
+
+--- 06 BORDER RADIUS:
+- 11px
+- 20px
+
+--- 07 WHITESPACE
+- Spacing system (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+*/
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* 10 / 16px */
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+html,
+body,
+main {
+  height: 100%;
+}
+
+body {
+  max-width: 144rem;
+  margin: 0 auto;
+  background-color: hsl(225, 100%, 94%);
+  background-image: url(/images/pattern-background-desktop.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* ******************************** */
+/* LAYOUT STYLES */
+/* ******************************** */
+
+.order-summary-card {
+  width: 45rem;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.order-hero-img {
+  width: 100%;
+  height: 22rem;
+  margin-bottom: 3.2rem;
+  background-image: url(/images/illustration-hero.svg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.order-details {
+  padding: 0 4.8rem 3.2rem 4.8rem;
+  text-align: center;
+}
+
+.order-subscription {
+  margin-bottom: 3.2rem;
+  padding: 1.6rem 2.4rem;
+  border-radius: 11px;
+  background-color: hsl(225, 100%, 98%);
+}
+
+.order-pricing {
+  margin-left: 1.2rem;
+}
+
+/* ******************************** */
+/* TYPOGRAPHY STYLES */
+/* ******************************** */
+
+.heading-primary {
+  display: block;
+  margin-bottom: 1.6rem;
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: hsl(223, 47%, 23%);
+  letter-spacing: -0.2px;
+}
+
+.order-description {
+  margin-bottom: 2.4rem;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  color: hsl(224, 23%, 55%);
+}
+
+.order-subscription {
+  font-size: 1.8rem;
+}
+
+.order-pricing-plan {
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.order-pricing-price {
+  color: hsl(224, 23%, 55%);
+}
+
+.link:link,
+.link:visited {
+  padding-bottom: 2px;
+  border-bottom: thin solid currentColor;
+  color: hsl(245, 75%, 52%);
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 250ms ease-in-out;
+}
+
+.link:hover,
+.link:active {
+  color: hsl(245, 75%, 57%);
+  border-bottom: thin solid transparent;
+}
+
+.btn:link,
+.btn:visited {
+  color: hsl(224, 23%, 55%);
+  font-weight: 900;
+  text-decoration: none;
+  transition: color 250ms ease-in-out;
+}
+
+.btn:hover,
+.btn:active {
+  color: hsl(223, 47%, 23%);
+}
+
+.btn--fill:link,
+.btn--fill:visited {
+  display: block;
+  padding: 1.6rem 0;
+  background-color: hsl(245, 75%, 52%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 11px;
+  transition: background-color 250ms ease-in-out;
+}
+
+.btn--fill:hover,
+.btn--fill:active {
+  background-color: hsl(245, 75%, 57%);
+}
+
+.btn--cta:link,
+.btn--cta:visited {
+  margin-bottom: 2.4rem;
+}
+
+/* ******************************** */
+/* UTILITIES STYLES */
+/* ******************************** */
+
+.flex {
+  display: flex !important;
+}
+
+.jc-center {
+  justify-content: center !important;
+}
+
+.jc-between {
+  justify-content: space-between !important;
+}
+
+.al-center {
+  align-items: center !important;
+}
+
+.push-right {
+  margin-left: auto;
+}
+
+/* ******************************** */
+/* MEDIA QUERIES */
+/* ******************************** */
+
+/* 540px breakpoint */
+@media all and (max-width: 33.75em) {
+  html {
+    /* 7.2 / 16px */
+    font-size: 45%;
+  }
+
+  body {
+    padding: 3.2rem;
+    font-size: 2rem;
+  }
+
+  .order-details {
+    padding: 0 3.2rem 3.2rem 3.2rem;
+  }
+
+  .heading-primary {
+    font-size: 3rem;
+  }
+
+  .order-description,
+  .order-subscription {
+    font-size: 2rem;
+  }
+
+  .link:link,
+  .link:visited {
+    font-size: 1.8rem;
+  }
+}
+
+/* 385px breakpoint */
+@media all and (max-width: 24.0625em) {
+  html {
+    /* 6.2 / 16px */
+    font-size: 37.5%;
+  }
+
+  body {
+    font-size: 2.4rem;
+  }
+
+  .order-summary-card {
+    width: 100%;
+  }
+
+  .heading-primary {
+    font-size: 3.6rem;
+  }
+
+  .order-description,
+  .order-subscription {
+    font-size: 2.4rem;
+  }
+
+  .link:link,
+  .link:visited {
+    font-size: 2rem;
+  }
+}
